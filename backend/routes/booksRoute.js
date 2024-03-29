@@ -2,7 +2,7 @@ import express, { Router } from 'express';
 import { Book } from '../models/bookModel.js';
 
 const router = express.Router();
-// get all books here 
+// create books here 
 
 router.post('', async (req, res) => {
     try{
@@ -32,7 +32,7 @@ router.post('', async (req, res) => {
 router.get('', async (req, res) => {
     try {
         const books = await Book.find({});
-        return res.status(200).json(books)
+        return res.status(200).json({data: books})
     } catch (error) {
         console.log(error.message);
         res.status(500).send({message: error.message});

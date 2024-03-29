@@ -13,10 +13,10 @@ const app = express();
 app.use(express.json());
 
 // Middleware for handling CORS POLICY
-// oPTION 1: Allow all origins with edfault of cors(*)
+// OPTION 1: Allow all origins with edfault of cors(*)
 
 app.use(cors({
-    origin: 'https://localhost:3000',
+    origin: 'http://localhost:5173/',
     methods: ['get', 'post', 'delete', 'update', 'put'],
     allowedHeaders: ['Content-Type']
 }));
