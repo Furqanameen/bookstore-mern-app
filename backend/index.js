@@ -9,16 +9,18 @@ import booksRoute from './routes/booksRoute.js';
 import cors from 'cors'
 const app = express();
 
+
 // Middleware for parsing request body
 app.use(express.json());
 
 // Middleware for handling CORS POLICY
 // OPTION 1: Allow all origins with edfault of cors(*)
 
+
 app.use(cors({
-    origin: 'http://localhost:5173/',
-    methods: ['get', 'post', 'delete', 'update', 'put'],
-    allowedHeaders: ['Content-Type']
+  origin: 'http://localhost:5173',
+  methods: ['GET', 'POST', 'DELETE', 'UPDATE', 'PUT'],
+  allowedHeaders: ['Content-Type']
 }));
 
 app.get('/', (request, response) => {
