@@ -24,6 +24,7 @@ app.use(cors({
 }));
 
 app.get('/', (request, response) => {
+    debugger
     console.log(request)
     return response.status(234).send('Welcome to MERN first application')
 });
